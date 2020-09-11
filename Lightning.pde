@@ -7,7 +7,8 @@
   int bkB = 0;
 void setup()
 {
-   size(300,300);
+ frameRate(100);
+  size(300,300);
   strokeWeight(5);
   background(bkR,bkG,bkB); //EDIT BACKGROUND WITH KEYS R G B keys to edit rgb 
   //W for white Delete or Backspace for black Any key for clear
@@ -30,14 +31,14 @@ if (endX < 300)
   startY= endY;
   fill (bkR,bkG,bkB, 5);
   rect(-10,-10,400,400);
-  delay(10); //delay in milliseconds for "framerate"
+  //delay(10); //delay in milliseconds for "framerate"
   } 
 }
 
 
 void mousePressed(){ // click mouse to add another lightning bolt
   startX = 0;
-  startY = (int)((Math.random() * 50)+125); //random start on y position
+  startY = (int)((Math.random() * 50)+125);
   endX = 200;
   endY = 200;
 }
