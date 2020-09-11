@@ -1,5 +1,5 @@
   int startX = 0;
-  int startY = 50;
+  int startY = 125;
   int endX = 200;
   int endY = 200;
   int bkR = 0;
@@ -28,7 +28,7 @@ if (endX < 300)
   line(startX, startY, endX, endY);
   startX = endX;
   startY= endY;
-  fill (bkR,bkG,bkB, 10);
+  fill (bkR,bkG,bkB, 5);
   rect(-10,-10,400,400);
   delay(10); //delay in milliseconds for "framerate"
   } 
@@ -37,7 +37,7 @@ if (endX < 300)
 
 void mousePressed(){ // click mouse to add another lightning bolt
   startX = 0;
-  startY = 50;
+  startY = (int)((Math.random() * 50)+125); //random start on y position
   endX = 200;
   endY = 200;
 }
